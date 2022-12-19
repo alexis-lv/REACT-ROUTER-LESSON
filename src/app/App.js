@@ -23,6 +23,9 @@ function App() {
         <Route path='/sign-up'>
           <SignUp />
         </Route>
+        <Route path='/articles/:title'>
+          <Article />
+        </Route>
         <Route path='/articles'>
           <Articles />
         </Route>
@@ -31,6 +34,9 @@ function App() {
         </Route>
         <Route path='/profile'>
           <Profile />
+        </Route>
+        <Route path='/authors/:name'>
+          <Author />
         </Route>
       </main>
       <Footer />
