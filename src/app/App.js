@@ -10,16 +10,31 @@ import Author from "../components/Author";
 import Profile from "../components/Profile";
 
 import "./App.css";
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
       <main>
-        {/* Add Routes here! */}
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route path='/sign-up'>
+          <SignUp />
+        </Route>
+        <Route path='/articles'>
+          <Articles />
+        </Route>
+        <Route path='/categories'>
+          <Categories />
+        </Route>
+        <Route path='/profile'>
+          <Profile />
+        </Route>
       </main>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
