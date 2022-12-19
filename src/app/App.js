@@ -10,13 +10,14 @@ import Author from "../components/Author";
 import Profile from "../components/Profile";
 
 import "./App.css";
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <Header />
       <main>
+        <Switch>
         <Route path='/about'>
           <About />
         </Route>
@@ -38,6 +39,7 @@ function App() {
         <Route path='/authors/:name'>
           <Author />
         </Route>
+        </Switch>
       </main>
       <Footer />
     </Router>
